@@ -4,22 +4,12 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 
-(function () {
-  const search = window.location.search;
-  if (search.startsWith("?p=/")) {
-    const path = search.slice(4).split("&q=");
-    const decoded = path[0].replace(/~and~/g, "&");
-    const query = path[1] ? "?" + path[1].replace(/~and~/g, "&") : "";
-    window.history.replaceState(
-      null,
-      "",
-      window.location.pathname.replace(/\/$/, "") +
-        decoded +
-        query +
-        window.location.hash,
-    );
-  }
-})();
+const params = new URLSearchParams(window.location.search);
+const redirect = params.get("p");
+
+if (redirect) {
+  window.history.replaceState(null, "", "/rm-consultoria-site" + redirect);
+}
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
