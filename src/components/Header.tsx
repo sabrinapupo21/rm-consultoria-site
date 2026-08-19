@@ -244,33 +244,56 @@ function RMLogo() {
         alignItems: "center",
       }}
     >
-      <img
-        src={logoRM}
-        alt="RM Consultoria Imobiliária"
+      <div
         style={{
+          width: 120,
           height: 48,
-          width: "auto",
-          objectFit: "contain",
-          display: "block",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
-      />
+      >
+        <img
+          src={logoRM}
+          alt="RM Consultoria Imobiliária"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            display: "block",
+          }}
+        />
+      </div>
+
       <div
         style={{
           width: 1,
           height: 28,
+          margin: "0 12px",
           backgroundColor: "rgba(13, 69, 131, 0.2)",
         }}
       />
-      <img
-        src={logoCaixaAqui}
-        alt="Caixa Aqui"
+
+      <div
         style={{
-          height: 36,
-          width: "auto",
-          objectFit: "contain",
-          display: "block",
+          width: 120,
+          height: 48,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
         }}
-      />
+      >
+        <img
+          src={logoCaixaAqui}
+          alt="Caixa Aqui"
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "contain",
+            display: "block",
+          }}
+        />
+      </div>
     </div>
   );
 }
