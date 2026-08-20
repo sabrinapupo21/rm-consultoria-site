@@ -237,63 +237,40 @@ export default function Header() {
 }
 
 function RMLogo() {
-  return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <div
-        style={{
-          width: 120,
-          height: 48,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <img
-          src={logoRM}
-          alt="RM Consultoria Imobiliária"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            display: "block",
-          }}
-        />
-      </div>
+  const logoRMHeight = 48;
+  const logoCaixaHeight = 46;
 
-      <div
+  return (
+    <div style={{ display: "flex", alignItems: "center" }}>
+      <img
+        src={logoRM}
+        alt="RM Consultoria Imobiliária"
         style={{
-          width: 1,
-          height: 28,
-          margin: "0 12px",
-          backgroundColor: "rgba(13, 69, 131, 0.2)",
+          height: logoRMHeight,
+          width: "auto",
+          display: "block",
+          marginRight: 12,
         }}
       />
 
       <div
         style={{
-          width: 120,
-          height: 48,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
+          width: 1,
+          height: 28,
+          backgroundColor: "rgba(13, 69, 131, 0.2)",
         }}
-      >
-        <img
-          src={logoCaixaAqui}
-          alt="Caixa Aqui"
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "contain",
-            display: "block",
-          }}
-        />
-      </div>
+      />
+
+      <img
+        src={logoCaixaAqui}
+        alt="Caixa Aqui"
+        style={{
+          height: logoCaixaHeight,
+          width: "auto",
+          display: "block",
+          marginLeft: 12,
+        }}
+      />
     </div>
   );
 }
