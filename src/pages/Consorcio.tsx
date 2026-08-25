@@ -53,8 +53,8 @@ export default function Consorcio() {
 
               <h1
                 style={{
-                  fontFamily: "Fraunces, serif",
-                  fontWeight: 700,
+                  fontFamily: '"DM Serif Display", serif',
+                  fontWeight: 400,
                   fontSize: "clamp(32px, 4.5vw, 54px)",
                   color: "#ffffff",
                   lineHeight: 1.1,

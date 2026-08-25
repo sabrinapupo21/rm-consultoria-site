@@ -26,8 +26,6 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => setOpen(false), [location.pathname]);
-
   return (
     <header
       style={{
@@ -183,6 +181,7 @@ export default function Header() {
             <Link
               key={link.to}
               to={link.to}
+              onClick={() => setOpen(false)}
               style={{
                 display: "block",
                 color: location.pathname === link.to ? "#e8960a" : "#0d4583",
