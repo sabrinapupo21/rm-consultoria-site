@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="86.518745mm"
+   height="29.842354mm"
+   viewBox="0 0 86.518745 29.842354"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   sodipodi:docname="logo-rm-consultoria-favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.44809905"
+     inkscape:cx="22.316495"
+     inkscape:cy="222.04912"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-98.954166,-89.69375)">
+    <path
+       class="st0"
+       d="m 99.07852,89.818104 h 29.27879 c 4.66196,0 8.06979,3.272896 8.06979,7.979833 v 3.587753 c 0,2.24102 -0.80698,4.21481 -2.10608,5.55889 1.7489,1.38907 2.55587,3.36286 2.55587,5.60388 v 6.86064 h -4.48468 v -6.81566 c 0,-1.88384 -1.524,-3.76502 -3.85498,-3.76502 h -24.97402 v 10.58068 h -4.48469 z m 4.48469,15.200316 h 24.52687 c 2.37596,0 3.85498,-1.88384 3.85498,-3.81 v -3.765024 c 0,-1.928813 -1.47902,-3.81 -3.85498,-3.81 h -24.52687 v 11.387664 z"
+       id="path23"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.248708px;stroke-miterlimit:10" />
+    <path
+       class="st0"
+       d="m 145.84627,89.818104 17.71121,25.018996 17.75619,-25.018996 h 4.03489 v 29.593646 h -4.48469 V 97.845562 l -15.33525,21.566188 h -3.94493 L 146.29342,97.845562 v 21.566188 h -4.48469 V 89.818104 h 4.03489 z"
+       id="path24"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.248708px;stroke-miterlimit:10" />
+  </g>
+</svg>

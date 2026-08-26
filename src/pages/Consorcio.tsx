@@ -10,9 +10,9 @@ export default function Consorcio() {
       {/* ── HERO ── */}
       <section
         style={{
-          backgroundColor: "#0d4583",
+          backgroundColor: "#0F1B33",
           backgroundImage:
-            "radial-gradient(ellipse 80% 70% at 80% 30%, rgba(232,150,10,0.13) 0%, transparent 55%)",
+            "radial-gradient(ellipse 80% 70% at 80% 30%, rgba(201,151,75,0.13) 0%, transparent 55%)",
           paddingTop: 68,
           minHeight: "85vh",
           display: "flex",
@@ -38,13 +38,13 @@ export default function Consorcio() {
           >
             <div>
               <div style={badgeStyle}>
-                <span style={{ color: "#f5b832" }}>★</span>
+                <span style={{ color: "#C9974B" }}>★</span>
                 <span
                   style={{
-                    fontFamily: "Outfit, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                     fontWeight: 500,
                     fontSize: 13,
-                    color: "#f5b832",
+                    color: "#C9974B",
                   }}
                 >
                   Destino principal das campanhas Google Ads
@@ -64,14 +64,14 @@ export default function Consorcio() {
               >
                 Consórcio Imobiliário: a carta de crédito certa para o seu
                 projeto,{" "}
-                <em style={{ color: "#f5b832", fontStyle: "italic" }}>
+                <em style={{ color: "#C9974B", fontStyle: "italic" }}>
                   sem juros
                 </em>
               </h1>
 
               <p
                 style={{
-                  fontFamily: "Outfit, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontSize: 18,
                   color: "rgba(255,255,255,0.78)",
                   lineHeight: 1.7,
@@ -113,10 +113,10 @@ export default function Consorcio() {
             >
               <div
                 style={{
-                  fontFamily: "Outfit, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontWeight: 600,
                   fontSize: 12,
-                  color: "#f5b832",
+                  color: "#C9974B",
                   letterSpacing: "1.8px",
                   textTransform: "uppercase",
                   marginBottom: 28,
@@ -147,7 +147,7 @@ export default function Consorcio() {
                     </span>
                     <span
                       style={{
-                        fontFamily: "Outfit, sans-serif",
+                        fontFamily: "Inter, sans-serif",
                         fontSize: 16,
                         color: "rgba(255,255,255,0.85)",
                       }}
@@ -212,8 +212,7 @@ export default function Consorcio() {
                   gap: 32,
                   alignItems: "flex-start",
                   padding: "32px 0",
-                  borderBottom:
-                    i < 4 ? "1px solid rgba(13,69,131,0.1)" : "none",
+                  borderBottom: i < 4 ? "1px solid rgba(15,27,51,0.1)" : "none",
                 }}
               >
                 <div
@@ -221,7 +220,7 @@ export default function Consorcio() {
                     width: 56,
                     height: 56,
                     borderRadius: "50%",
-                    backgroundColor: "#0d4583",
+                    backgroundColor: "#0F1B33",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -253,7 +252,7 @@ export default function Consorcio() {
                   </h3>
                   <p
                     style={{
-                      fontFamily: "Outfit, sans-serif",
+                      fontFamily: "Inter, sans-serif",
                       fontSize: 16,
                       color: "#4b5563",
                       lineHeight: 1.7,
@@ -268,107 +267,13 @@ export default function Consorcio() {
         </div>
       </section>
 
-      {/* ── COMPARATIVO ── */}
-      <section style={{ backgroundColor: "#ffffff", padding: "96px 24px" }}>
-        <div style={{ maxWidth: 900, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 56 }}>
-            <SectionLabel>Compare</SectionLabel>
-            <h2 style={sectionH2}>Consórcio vs. Financiamento</h2>
-          </div>
-
-          <div style={{ overflowX: "auto" }}>
-            <table
-              style={{
-                width: "100%",
-                borderCollapse: "collapse",
-                fontFamily: "Outfit, sans-serif",
-              }}
-            >
-              <thead>
-                <tr>
-                  <th style={thBase}>Característica</th>
-                  <th
-                    style={{
-                      ...thBase,
-                      backgroundColor: "#0d4583",
-                      color: "#ffffff",
-                    }}
-                  >
-                    Consórcio ✓
-                  </th>
-                  <th
-                    style={{
-                      ...thBase,
-                      backgroundColor: "#f8f7f4",
-                      color: "#6b7280",
-                    }}
-                  >
-                    Financiamento
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  ["Juros", "Não tem (só taxa de administração)", "Tem juros"],
-                  ["Entrada", "Não exige", "Geralmente exige"],
-                  [
-                    "Quando recebe o crédito",
-                    "Após contemplação",
-                    "Imediato, após aprovação",
-                  ],
-                  ["Uso do FGTS", "Sim", "Sim"],
-                  [
-                    "Ideal para",
-                    "Quem pode planejar, sem pressa",
-                    "Quem precisa do imóvel logo",
-                  ],
-                  ["Custo total", "Menor (sem juros)", "Maior (com juros)"],
-                ].map(([feature, consorcio, financiamento], i) => (
-                  <tr
-                    key={feature}
-                    style={{
-                      backgroundColor: i % 2 === 0 ? "#fafafa" : "#ffffff",
-                    }}
-                  >
-                    <td style={tdLabel}>{feature}</td>
-                    <td style={tdConsorcio}>{consorcio}</td>
-                    <td style={tdFinanciamento}>{financiamento}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div style={{ marginTop: 40, textAlign: "center" }}>
-            <p
-              style={{
-                fontFamily: "Outfit, sans-serif",
-                fontSize: 16,
-                color: "#6b7280",
-                marginBottom: 24,
-              }}
-            >
-              Não sabe qual é o melhor para o seu caso?
-            </p>
-            <a
-              href={WHATSAPP_CONSORCIO}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={btnNavy}
-            >
-              Fale com a RM e descubra →
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* ── POR QUE A RENATA ── */}
       <section
         style={{
-          backgroundColor: "#0d4583",
+          backgroundColor: "#0F1B33",
           padding: "96px 24px",
           backgroundImage:
-            "radial-gradient(ellipse 60% 80% at 0% 50%, rgba(232,150,10,0.08) 0%, transparent 55%)",
+            "radial-gradient(ellipse 60% 80% at 0% 50%, rgba(201,151,75,0.08) 0%, transparent 55%)",
         }}
       >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -447,7 +352,7 @@ export default function Consorcio() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "Outfit, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                     fontSize: 15,
                     color: "rgba(255,255,255,0.65)",
                     lineHeight: 1.6,
@@ -512,7 +417,7 @@ export default function Consorcio() {
       <section
         style={{
           backgroundColor: "#fff8ee",
-          borderTop: "1px solid rgba(232,150,10,0.2)",
+          borderTop: "1px solid rgba(201,151,75,0.2)",
           padding: "96px 24px",
           textAlign: "center",
         }}
@@ -523,7 +428,7 @@ export default function Consorcio() {
               fontFamily: "Fraunces, serif",
               fontWeight: 700,
               fontSize: "clamp(26px, 4vw, 40px)",
-              color: "#0d4583",
+              color: "#0F1B33",
               lineHeight: 1.15,
               marginBottom: 16,
             }}
@@ -532,7 +437,7 @@ export default function Consorcio() {
           </h2>
           <p
             style={{
-              fontFamily: "Outfit, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: 17,
               color: "#6b7280",
               marginBottom: 36,
@@ -553,7 +458,7 @@ export default function Consorcio() {
             <Link
               to="/"
               style={{
-                fontFamily: "Outfit, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: 14,
                 color: "#6b7280",
                 textDecoration: "none",
@@ -578,12 +483,12 @@ function SectionLabel({
   return (
     <div
       style={{
-        fontFamily: "Outfit, sans-serif",
+        fontFamily: "Inter, sans-serif",
         fontWeight: 600,
         fontSize: 12,
         letterSpacing: "2px",
         textTransform: "uppercase",
-        color: light ? "rgba(245,184,50,0.8)" : "#e8960a",
+        color: light ? "rgba(245,184,50,0.8)" : "#C9974B",
         marginBottom: 16,
       }}
     >
@@ -598,7 +503,7 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
   return (
     <div>
       {items.map((item, i) => (
-        <div key={i} style={{ borderBottom: "1px solid rgba(13,69,131,0.1)" }}>
+        <div key={i} style={{ borderBottom: "1px solid rgba(15,27,51,0.1)" }}>
           <button
             onClick={() => setOpenIdx(openIdx === i ? null : i)}
             style={{
@@ -630,8 +535,8 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
                 width: 28,
                 height: 28,
                 borderRadius: "50%",
-                backgroundColor: openIdx === i ? "#0d4583" : "#f1f0ec",
-                color: openIdx === i ? "#ffffff" : "#0d4583",
+                backgroundColor: openIdx === i ? "#0F1B33" : "#f1f0ec",
+                color: openIdx === i ? "#ffffff" : "#0F1B33",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -648,7 +553,7 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
           {openIdx === i && (
             <p
               style={{
-                fontFamily: "Outfit, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: 16,
                 color: "#4b5563",
                 lineHeight: 1.7,
@@ -668,8 +573,8 @@ const badgeStyle: React.CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
   gap: 8,
-  backgroundColor: "rgba(232,150,10,0.15)",
-  border: "1px solid rgba(232,150,10,0.35)",
+  backgroundColor: "rgba(201,151,75,0.15)",
+  border: "1px solid rgba(201,151,75,0.35)",
   borderRadius: 100,
   padding: "5px 14px 5px 12px",
   marginBottom: 28,
@@ -686,9 +591,9 @@ const sectionH2: React.CSSProperties = {
 
 const btnAmber: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#e8960a",
-  color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  backgroundColor: "#C9974B",
+  color: "#0F1B33",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 16,
   textDecoration: "none",
@@ -698,9 +603,9 @@ const btnAmber: React.CSSProperties = {
 
 const btnAmberLarge: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#e8960a",
-  color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  backgroundColor: "#C9974B",
+  color: "#0F1B33",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 17,
   textDecoration: "none",
@@ -712,7 +617,7 @@ const btnGhost: React.CSSProperties = {
   display: "inline-block",
   backgroundColor: "rgba(255,255,255,0.1)",
   color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 16,
   textDecoration: "none",
@@ -723,48 +628,12 @@ const btnGhost: React.CSSProperties = {
 
 const btnNavy: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#0d4583",
+  backgroundColor: "#0F1B33",
   color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 15,
   textDecoration: "none",
   padding: "13px 26px",
   borderRadius: 8,
-};
-
-const thBase: React.CSSProperties = {
-  fontFamily: "Outfit, sans-serif",
-  fontWeight: 600,
-  fontSize: 14,
-  padding: "14px 20px",
-  textAlign: "left",
-  borderBottom: "2px solid rgba(13,69,131,0.1)",
-};
-
-const tdLabel: React.CSSProperties = {
-  fontFamily: "Outfit, sans-serif",
-  fontWeight: 500,
-  fontSize: 15,
-  color: "#374151",
-  padding: "16px 20px",
-  borderBottom: "1px solid rgba(13,69,131,0.07)",
-};
-
-const tdConsorcio: React.CSSProperties = {
-  fontFamily: "Outfit, sans-serif",
-  fontSize: 15,
-  color: "#0d4583",
-  padding: "16px 20px",
-  borderBottom: "1px solid rgba(13,69,131,0.07)",
-  fontWeight: 500,
-  backgroundColor: "rgba(13,69,131,0.04)",
-};
-
-const tdFinanciamento: React.CSSProperties = {
-  fontFamily: "Outfit, sans-serif",
-  fontSize: 15,
-  color: "#6b7280",
-  padding: "16px 20px",
-  borderBottom: "1px solid rgba(13,69,131,0.07)",
 };

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logoRM from "../assets/logos/logo-rm-consultoria.svg";
+import logoRM from "../assets/logos/logo-rm-consultoria-dark.svg";
 import logoCaixaAqui from "../assets/logos/logo-caixa-aqui.svg";
 
 const WHATSAPP =

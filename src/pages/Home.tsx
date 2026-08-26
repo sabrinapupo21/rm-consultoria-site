@@ -6,15 +6,12 @@ const WHATSAPP =
 export default function Home() {
   return (
     <>
-      {/* SEO meta (title handled by document.title) */}
-
-      {/* ── HERO ── */}
       <section
         style={{
           minHeight: "100vh",
-          backgroundColor: "#0d4583",
+          backgroundColor: "#0F1B33",
           backgroundImage: `
-            radial-gradient(ellipse 80% 60% at 70% 40%, rgba(232,150,10,0.12) 0%, transparent 60%),
+            radial-gradient(ellipse 80% 60% at 70% 40%, rgba(201,151,75,0.12) 0%, transparent 60%),
             radial-gradient(ellipse 60% 80% at 10% 80%, rgba(255,255,255,0.04) 0%, transparent 50%)
           `,
           display: "flex",
@@ -46,8 +43,8 @@ export default function Home() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: 8,
-                  backgroundColor: "rgba(232,150,10,0.15)",
-                  border: "1px solid rgba(232,150,10,0.35)",
+                  backgroundColor: "rgba(201,151,75,0.15)",
+                  border: "1px solid rgba(201,151,75,0.35)",
                   borderRadius: 100,
                   padding: "5px 14px 5px 10px",
                   marginBottom: 28,
@@ -56,10 +53,10 @@ export default function Home() {
                 <span style={{ fontSize: 16 }}>🏆</span>
                 <span
                   style={{
-                    fontFamily: "Outfit, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                     fontWeight: 500,
                     fontSize: 13,
-                    color: "#f5b832",
+                    color: "#C9974B",
                     letterSpacing: "0.3px",
                   }}
                 >
@@ -79,14 +76,14 @@ export default function Home() {
                 }}
               >
                 Soluções em crédito para realizar seus{" "}
-                <em style={{ color: "#f5b832", fontStyle: "italic" }}>
+                <em style={{ color: "#C9974B", fontStyle: "italic" }}>
                   projetos imobiliários
                 </em>
               </h1>
 
               <p
                 style={{
-                  fontFamily: "Outfit, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontSize: 18,
                   color: "rgba(255,255,255,0.75)",
                   lineHeight: 1.7,
@@ -108,9 +105,6 @@ export default function Home() {
                 >
                   Falar com a RM →
                 </a>
-                <Link to="/consorcio-imobiliario" style={btnSecondary}>
-                  Conheça o consórcio
-                </Link>
               </div>
             </div>
 
@@ -135,7 +129,7 @@ export default function Home() {
                     position: "absolute",
                     inset: 0,
                     background:
-                      "linear-gradient(180deg, transparent 50%, rgba(13,69,131,0.5) 100%)",
+                      "linear-gradient(180deg, transparent 50%, rgba(15,27,51,0.5) 100%)",
                   }}
                 />
               </div>
@@ -159,7 +153,7 @@ export default function Home() {
                     width: 44,
                     height: 44,
                     borderRadius: 10,
-                    backgroundColor: "#0d4583",
+                    backgroundColor: "#0F1B33",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -174,7 +168,7 @@ export default function Home() {
                       fontFamily: "Fraunces, serif",
                       fontWeight: 700,
                       fontSize: 20,
-                      color: "#0d4583",
+                      color: "#0F1B33",
                       lineHeight: 1,
                     }}
                   >
@@ -182,7 +176,7 @@ export default function Home() {
                   </div>
                   <div
                     style={{
-                      fontFamily: "Outfit, sans-serif",
+                      fontFamily: "Inter, sans-serif",
                       fontSize: 12,
                       color: "#6b7280",
                       marginTop: 3,
@@ -206,7 +200,10 @@ export default function Home() {
       </section>
 
       {/* ── SOLUÇÕES ── */}
-      <section style={{ backgroundColor: "#f8f7f4", padding: "96px 24px" }}>
+      <section
+        id="solucoes"
+        style={{ backgroundColor: "#f8f7f4", padding: "96px 24px" }}
+      >
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <SectionLabel>Como a RM pode ajudar você?</SectionLabel>
           <SectionTitle>
@@ -228,7 +225,6 @@ export default function Home() {
               description="Planeje a aquisição do seu imóvel com uma carta de crédito adequada ao seu objetivo. Comprar imóvel, terreno, construir, reformar ou planejar patrimônio — sem juros."
               link="/consorcio-imobiliario"
               linkLabel="Conheça o consórcio"
-              highlight
             />
             <SolutionCard
               emoji="🏡"
@@ -262,10 +258,10 @@ export default function Home() {
       {/* ── CONSÓRCIO DESTAQUE ── */}
       <section
         style={{
-          backgroundColor: "#0d4583",
+          backgroundColor: "#0F1B33",
           padding: "96px 24px",
           backgroundImage:
-            "radial-gradient(ellipse 70% 90% at 100% 50%, rgba(232,150,10,0.08) 0%, transparent 60%)",
+            "radial-gradient(ellipse 70% 90% at 100% 50%, rgba(201,151,75,0.08) 0%, transparent 60%)",
         }}
       >
         <div
@@ -296,7 +292,7 @@ export default function Home() {
             </h2>
             <p
               style={{
-                fontFamily: "Outfit, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: 17,
                 color: "rgba(255,255,255,0.75)",
                 lineHeight: 1.7,
@@ -331,7 +327,7 @@ export default function Home() {
                       width: 22,
                       height: 22,
                       borderRadius: "50%",
-                      backgroundColor: "#e8960a",
+                      backgroundColor: "#C9974B",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -350,7 +346,7 @@ export default function Home() {
                   </span>
                   <span
                     style={{
-                      fontFamily: "Outfit, sans-serif",
+                      fontFamily: "Inter, sans-serif",
                       fontSize: 16,
                       color: "rgba(255,255,255,0.85)",
                     }}
@@ -378,10 +374,10 @@ export default function Home() {
           >
             <div
               style={{
-                fontFamily: "Outfit, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontWeight: 600,
                 fontSize: 13,
-                color: "#f5b832",
+                color: "#C9974B",
                 letterSpacing: "1.2px",
                 textTransform: "uppercase",
                 marginBottom: 32,
@@ -425,7 +421,7 @@ export default function Home() {
                   <div>
                     <div
                       style={{
-                        fontFamily: "Outfit, sans-serif",
+                        fontFamily: "Inter, sans-serif",
                         fontSize: 13,
                         color: "rgba(255,255,255,0.5)",
                         marginBottom: 4,
@@ -435,7 +431,7 @@ export default function Home() {
                     </div>
                     <div
                       style={{
-                        fontFamily: "Outfit, sans-serif",
+                        fontFamily: "Inter, sans-serif",
                         fontSize: 12,
                         color: "rgba(255,255,255,0.4)",
                       }}
@@ -448,7 +444,7 @@ export default function Home() {
                       fontFamily: "Fraunces, serif",
                       fontWeight: 700,
                       fontSize: 18,
-                      color: "#f5b832",
+                      color: "#C9974B",
                       textAlign: "right",
                       maxWidth: 140,
                     }}
@@ -575,8 +571,8 @@ export default function Home() {
           backgroundColor: "#fff8ee",
           border: "none",
           padding: "80px 24px",
-          borderTop: "1px solid rgba(232,150,10,0.2)",
-          borderBottom: "1px solid rgba(232,150,10,0.2)",
+          borderTop: "1px solid rgba(201,151,75,0.2)",
+          borderBottom: "1px solid rgba(201,151,75,0.2)",
         }}
       >
         <div style={{ maxWidth: 720, margin: "0 auto", textAlign: "center" }}>
@@ -586,7 +582,7 @@ export default function Home() {
               fontFamily: "Fraunces, serif",
               fontWeight: 700,
               fontSize: "clamp(24px, 3.5vw, 38px)",
-              color: "#0d4583",
+              color: "#0F1B33",
               lineHeight: 1.2,
               letterSpacing: "-0.5px",
               marginBottom: 20,
@@ -596,7 +592,7 @@ export default function Home() {
           </h2>
           <p
             style={{
-              fontFamily: "Outfit, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: 18,
               color: "#4b5563",
               lineHeight: 1.7,
@@ -666,7 +662,7 @@ export default function Home() {
                     alignItems: "center",
                     justifyContent: "center",
                     margin: "0 auto 20px",
-                    border: "2px solid rgba(13,69,131,0.15)",
+                    border: "2px solid rgba(15,27,51,0.15)",
                   }}
                 >
                   <span
@@ -674,7 +670,7 @@ export default function Home() {
                       fontFamily: "Fraunces, serif",
                       fontWeight: 700,
                       fontSize: 20,
-                      color: "#0d4583",
+                      color: "#0F1B33",
                     }}
                   >
                     {item.step}
@@ -694,7 +690,7 @@ export default function Home() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "Outfit, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                     fontSize: 15,
                     color: "#6b7280",
                     lineHeight: 1.6,
@@ -710,6 +706,7 @@ export default function Home() {
 
       {/* ── SOBRE RENATA ── */}
       <section
+        id="sobre"
         style={{
           backgroundColor: "#f8f7f4",
           padding: "96px 24px",
@@ -777,7 +774,7 @@ export default function Home() {
                   key={item.label}
                   style={{
                     backgroundColor: "#ffffff",
-                    border: "1px solid rgba(13,69,131,0.1)",
+                    border: "1px solid rgba(15,27,51,0.1)",
                     borderRadius: 12,
                     padding: "16px 20px",
                   }}
@@ -787,7 +784,7 @@ export default function Home() {
                       fontFamily: "Fraunces, serif",
                       fontWeight: 700,
                       fontSize: 24,
-                      color: "#0d4583",
+                      color: "#0F1B33",
                       lineHeight: 1,
                       marginBottom: 6,
                     }}
@@ -796,7 +793,7 @@ export default function Home() {
                   </div>
                   <div
                     style={{
-                      fontFamily: "Outfit, sans-serif",
+                      fontFamily: "Inter, sans-serif",
                       fontSize: 13,
                       color: "#6b7280",
                     }}
@@ -820,7 +817,10 @@ export default function Home() {
       </section>
 
       {/* ── DEPOIMENTOS ── */}
-      <section style={{ backgroundColor: "#0d4583", padding: "96px 24px" }}>
+      <section
+        id="depoimentos"
+        style={{ backgroundColor: "#0F1B33", padding: "96px 24px" }}
+      >
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 64 }}>
             <SectionLabel light>Depoimentos</SectionLabel>
@@ -873,14 +873,14 @@ export default function Home() {
               >
                 <div style={{ display: "flex", gap: 4, marginBottom: 18 }}>
                   {[1, 2, 3, 4, 5].map((s) => (
-                    <span key={s} style={{ color: "#f5b832", fontSize: 16 }}>
+                    <span key={s} style={{ color: "#C9974B", fontSize: 16 }}>
                       ★
                     </span>
                   ))}
                 </div>
                 <p
                   style={{
-                    fontFamily: "Outfit, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                     fontSize: 16,
                     color: "rgba(255,255,255,0.8)",
                     lineHeight: 1.7,
@@ -893,7 +893,7 @@ export default function Home() {
                 <div>
                   <div
                     style={{
-                      fontFamily: "Outfit, sans-serif",
+                      fontFamily: "Inter, sans-serif",
                       fontWeight: 600,
                       fontSize: 15,
                       color: "#ffffff",
@@ -903,7 +903,7 @@ export default function Home() {
                   </div>
                   <div
                     style={{
-                      fontFamily: "Outfit, sans-serif",
+                      fontFamily: "Inter, sans-serif",
                       fontSize: 13,
                       color: "rgba(255,255,255,0.45)",
                     }}
@@ -918,7 +918,10 @@ export default function Home() {
       </section>
 
       {/* ── FAQ ── */}
-      <section style={{ backgroundColor: "#ffffff", padding: "96px 24px" }}>
+      <section
+        id="duvidas"
+        style={{ backgroundColor: "#ffffff", padding: "96px 24px" }}
+      >
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: 56 }}>
             <SectionLabel>Dúvidas</SectionLabel>
@@ -955,7 +958,7 @@ export default function Home() {
       <section
         style={{
           backgroundColor: "#fff8ee",
-          borderTop: "1px solid rgba(232,150,10,0.2)",
+          borderTop: "1px solid rgba(201,151,75,0.2)",
           padding: "96px 24px",
           textAlign: "center",
         }}
@@ -967,7 +970,7 @@ export default function Home() {
               fontFamily: "Fraunces, serif",
               fontWeight: 700,
               fontSize: "clamp(26px, 4vw, 42px)",
-              color: "#0d4583",
+              color: "#0F1B33",
               lineHeight: 1.15,
               letterSpacing: "-0.5px",
               marginBottom: 16,
@@ -977,7 +980,7 @@ export default function Home() {
           </h2>
           <p
             style={{
-              fontFamily: "Outfit, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: 17,
               color: "#4b5563",
               marginBottom: 12,
@@ -987,7 +990,7 @@ export default function Home() {
           </p>
           <p
             style={{
-              fontFamily: "Outfit, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: 16,
               color: "#6b7280",
               marginBottom: 36,
@@ -1021,12 +1024,12 @@ function SectionLabel({
   return (
     <div
       style={{
-        fontFamily: "Outfit, sans-serif",
+        fontFamily: "Inter, sans-serif",
         fontWeight: 600,
         fontSize: 12,
         letterSpacing: "2px",
         textTransform: "uppercase",
-        color: light ? "rgba(245,184,50,0.8)" : "#e8960a",
+        color: light ? "rgba(245,184,50,0.8)" : "#C9974B",
         marginBottom: 16,
       }}
     >
@@ -1070,8 +1073,8 @@ function SolutionCard({
   return (
     <div
       style={{
-        backgroundColor: highlight ? "#0d4583" : "#ffffff",
-        border: highlight ? "none" : "1px solid rgba(13,69,131,0.1)",
+        backgroundColor: highlight ? "#0F1B33" : "#ffffff",
+        border: highlight ? "none" : "1px solid rgba(15,27,51,0.1)",
         borderRadius: 16,
         padding: 36,
         display: "flex",
@@ -1082,7 +1085,7 @@ function SolutionCard({
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
         (e.currentTarget as HTMLElement).style.boxShadow =
-          "0 16px 40px rgba(13,69,131,0.15)";
+          "0 16px 40px rgba(15,27,51,0.15)";
       }}
       onMouseLeave={(e) => {
         (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
@@ -1104,7 +1107,7 @@ function SolutionCard({
       </h3>
       <p
         style={{
-          fontFamily: "Outfit, sans-serif",
+          fontFamily: "Inter, sans-serif",
           fontSize: 15,
           color: highlight ? "rgba(255,255,255,0.75)" : "#6b7280",
           lineHeight: 1.7,
@@ -1117,10 +1120,10 @@ function SolutionCard({
       <Link
         to={link}
         style={{
-          fontFamily: "Outfit, sans-serif",
+          fontFamily: "Inter, sans-serif",
           fontWeight: 600,
           fontSize: 14,
-          color: highlight ? "#f5b832" : "#0d4583",
+          color: highlight ? "#C9974B" : "#0F1B33",
           textDecoration: "none",
           display: "flex",
           alignItems: "center",
@@ -1142,7 +1145,7 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
         <div
           key={i}
           style={{
-            borderBottom: "1px solid rgba(13,69,131,0.1)",
+            borderBottom: "1px solid rgba(15,27,51,0.1)",
             overflow: "hidden",
           }}
         >
@@ -1177,13 +1180,13 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
                 width: 28,
                 height: 28,
                 borderRadius: "50%",
-                backgroundColor: openIdx === i ? "#0d4583" : "#f1f0ec",
+                backgroundColor: openIdx === i ? "#0F1B33" : "#f1f0ec",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 flexShrink: 0,
                 transition: "background-color 0.2s",
-                color: openIdx === i ? "#ffffff" : "#0d4583",
+                color: openIdx === i ? "#ffffff" : "#0F1B33",
                 fontSize: 18,
                 fontWeight: 300,
                 lineHeight: 1,
@@ -1195,7 +1198,7 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
           {openIdx === i && (
             <p
               style={{
-                fontFamily: "Outfit, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: 16,
                 color: "#4b5563",
                 lineHeight: 1.7,
@@ -1215,22 +1218,22 @@ import React from "react";
 
 const btnPrimary: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#e8960a",
-  color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
-  fontWeight: 600,
+  backgroundColor: "#F4EEE3",
+  color: "#0F1B33",
+  fontFamily: "Inter, sans-serif",
+  fontWeight: 700,
   fontSize: 16,
   textDecoration: "none",
-  padding: "14px 28px",
+  padding: "14px 32px",
   borderRadius: 8,
-  transition: "background-color 0.2s, transform 0.15s",
+  letterSpacing: "0.2px",
 };
 
 const btnSecondary: React.CSSProperties = {
   display: "inline-block",
   backgroundColor: "rgba(255,255,255,0.1)",
   color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 16,
   textDecoration: "none",
@@ -1242,9 +1245,9 @@ const btnSecondary: React.CSSProperties = {
 
 const btnNavy: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#0d4583",
+  backgroundColor: "#0F1B33",
   color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 15,
   textDecoration: "none",
@@ -1255,9 +1258,9 @@ const btnNavy: React.CSSProperties = {
 
 const btnAmber: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#e8960a",
-  color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  backgroundColor: "#C9974B",
+  color: "#0F1B33",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 15,
   textDecoration: "none",
@@ -1277,7 +1280,7 @@ const sectionH2: React.CSSProperties = {
 };
 
 const bodyText: React.CSSProperties = {
-  fontFamily: "Outfit, sans-serif",
+  fontFamily: "Inter, sans-serif",
   fontSize: 17,
   color: "#4b5563",
   lineHeight: 1.7,

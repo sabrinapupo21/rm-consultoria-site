@@ -10,7 +10,7 @@ export default function FinanciamentoConstrucao() {
       {/* ── HERO ── */}
       <section
         style={{
-          backgroundColor: "#0d4583",
+          backgroundColor: "#0F1B33",
           backgroundImage:
             "radial-gradient(ellipse 60% 80% at 20% 60%, rgba(232,150,10,0.1) 0%, transparent 55%)",
           paddingTop: 68,
@@ -273,7 +273,7 @@ export default function FinanciamentoConstrucao() {
                     width: 52,
                     height: 52,
                     borderRadius: "50%",
-                    backgroundColor: "#e8960a",
+                    backgroundColor: "#C9974B",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -345,7 +345,7 @@ export default function FinanciamentoConstrucao() {
                 fontFamily: "Fraunces, serif",
                 fontWeight: 700,
                 fontSize: 19,
-                color: "#0d4583",
+                color: "#0F1B33",
                 marginBottom: 10,
               }}
             >
@@ -411,7 +411,7 @@ export default function FinanciamentoConstrucao() {
       {/* ── CTA ── */}
       <section
         style={{
-          backgroundColor: "#0d4583",
+          backgroundColor: "#0F1B33",
           padding: "96px 24px",
           textAlign: "center",
           backgroundImage:
@@ -479,7 +479,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
         fontSize: 12,
         letterSpacing: "2px",
         textTransform: "uppercase",
-        color: "#e8960a",
+        color: "#C9974B",
         marginBottom: 16,
       }}
     >
@@ -526,8 +526,8 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
                 width: 28,
                 height: 28,
                 borderRadius: "50%",
-                backgroundColor: openIdx === i ? "#0d4583" : "#f1f0ec",
-                color: openIdx === i ? "#ffffff" : "#0d4583",
+                backgroundColor: openIdx === i ? "#0F1B33" : "#f1f0ec",
+                color: openIdx === i ? "#ffffff" : "#0F1B33",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -571,9 +571,9 @@ const sectionH2: React.CSSProperties = {
 
 const btnAmber: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#e8960a",
-  color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  backgroundColor: "#C9974B",
+  color: "#0F1B33",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 16,
   textDecoration: "none",
@@ -583,9 +583,9 @@ const btnAmber: React.CSSProperties = {
 
 const btnAmberLarge: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#e8960a",
-  color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  backgroundColor: "#C9974B",
+  color: "#0F1B33",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 17,
   textDecoration: "none",

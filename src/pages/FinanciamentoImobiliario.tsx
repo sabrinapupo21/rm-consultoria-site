@@ -10,7 +10,7 @@ export default function FinanciamentoImobiliario() {
       {/* ── HERO ── */}
       <section
         style={{
-          backgroundColor: "#0d4583",
+          backgroundColor: "#0F1B33",
           backgroundImage:
             "radial-gradient(ellipse 70% 80% at 90% 40%, rgba(13,100,200,0.25) 0%, transparent 60%)",
           paddingTop: 68,
@@ -34,7 +34,7 @@ export default function FinanciamentoImobiliario() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: 6,
-                fontFamily: "Outfit, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: 13,
                 color: "rgba(255,255,255,0.55)",
                 textDecoration: "none",
@@ -63,7 +63,7 @@ export default function FinanciamentoImobiliario() {
 
             <p
               style={{
-                fontFamily: "Outfit, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: 18,
                 color: "rgba(255,255,255,0.75)",
                 lineHeight: 1.7,
@@ -114,7 +114,7 @@ export default function FinanciamentoImobiliario() {
               <h2 style={sectionH2}>O que a RM faz por você</h2>
               <p
                 style={{
-                  fontFamily: "Outfit, sans-serif",
+                  fontFamily: "Inter, sans-serif",
                   fontSize: 17,
                   color: "#4b5563",
                   lineHeight: 1.7,
@@ -145,7 +145,7 @@ export default function FinanciamentoImobiliario() {
                         width: 22,
                         height: 22,
                         borderRadius: "50%",
-                        backgroundColor: "#0d4583",
+                        backgroundColor: "#0F1B33",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -164,7 +164,7 @@ export default function FinanciamentoImobiliario() {
                     </span>
                     <span
                       style={{
-                        fontFamily: "Outfit, sans-serif",
+                        fontFamily: "Inter, sans-serif",
                         fontSize: 16,
                         color: "#374151",
                       }}
@@ -240,7 +240,7 @@ export default function FinanciamentoImobiliario() {
                 key={card.title}
                 style={{
                   backgroundColor: "#ffffff",
-                  border: "1px solid rgba(13,69,131,0.1)",
+                  border: "1px solid rgba(15,27,51,0.1)",
                   borderRadius: 16,
                   padding: 32,
                 }}
@@ -261,7 +261,7 @@ export default function FinanciamentoImobiliario() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "Outfit, sans-serif",
+                    fontFamily: "Inter, sans-serif",
                     fontSize: 15,
                     color: "#4b5563",
                     lineHeight: 1.7,
@@ -276,8 +276,8 @@ export default function FinanciamentoImobiliario() {
                       key={tag}
                       style={{
                         backgroundColor: "#e8f0fa",
-                        color: "#0d4583",
-                        fontFamily: "Outfit, sans-serif",
+                        color: "#0F1B33",
+                        fontFamily: "Inter, sans-serif",
                         fontWeight: 500,
                         fontSize: 12,
                         padding: "4px 10px",
@@ -332,7 +332,7 @@ export default function FinanciamentoImobiliario() {
       {/* ── CTA ── */}
       <section
         style={{
-          backgroundColor: "#0d4583",
+          backgroundColor: "#0F1B33",
           padding: "96px 24px",
           textAlign: "center",
         }}
@@ -352,7 +352,7 @@ export default function FinanciamentoImobiliario() {
           </h2>
           <p
             style={{
-              fontFamily: "Outfit, sans-serif",
+              fontFamily: "Inter, sans-serif",
               fontSize: 17,
               color: "rgba(255,255,255,0.72)",
               marginBottom: 36,
@@ -373,7 +373,7 @@ export default function FinanciamentoImobiliario() {
             <Link
               to="/"
               style={{
-                fontFamily: "Outfit, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: 14,
                 color: "rgba(255,255,255,0.45)",
                 textDecoration: "none",
@@ -392,12 +392,12 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <div
       style={{
-        fontFamily: "Outfit, sans-serif",
+        fontFamily: "Inter, sans-serif",
         fontWeight: 600,
         fontSize: 12,
         letterSpacing: "2px",
         textTransform: "uppercase",
-        color: "#e8960a",
+        color: "#C9974B",
         marginBottom: 16,
       }}
     >
@@ -412,7 +412,7 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
   return (
     <div>
       {items.map((item, i) => (
-        <div key={i} style={{ borderBottom: "1px solid rgba(13,69,131,0.1)" }}>
+        <div key={i} style={{ borderBottom: "1px solid rgba(15,27,51,0.1)" }}>
           <button
             onClick={() => setOpenIdx(openIdx === i ? null : i)}
             style={{
@@ -444,8 +444,8 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
                 width: 28,
                 height: 28,
                 borderRadius: "50%",
-                backgroundColor: openIdx === i ? "#0d4583" : "#f1f0ec",
-                color: openIdx === i ? "#ffffff" : "#0d4583",
+                backgroundColor: openIdx === i ? "#0F1B33" : "#f1f0ec",
+                color: openIdx === i ? "#ffffff" : "#0F1B33",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -462,7 +462,7 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
           {openIdx === i && (
             <p
               style={{
-                fontFamily: "Outfit, sans-serif",
+                fontFamily: "Inter, sans-serif",
                 fontSize: 16,
                 color: "#4b5563",
                 lineHeight: 1.7,
@@ -489,9 +489,9 @@ const sectionH2: React.CSSProperties = {
 
 const btnAmber: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#e8960a",
-  color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  backgroundColor: "#C9974B",
+  color: "#0F1B33",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 16,
   textDecoration: "none",
@@ -503,7 +503,7 @@ const btnGhost: React.CSSProperties = {
   display: "inline-block",
   backgroundColor: "rgba(255,255,255,0.1)",
   color: "#ffffff",
-  fontFamily: "Outfit, sans-serif",
+  fontFamily: "Inter, sans-serif",
   fontWeight: 600,
   fontSize: 16,
   textDecoration: "none",
