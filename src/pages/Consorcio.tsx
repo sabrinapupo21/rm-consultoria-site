@@ -625,15 +625,3 @@ const btnGhost: React.CSSProperties = {
   borderRadius: 8,
   border: "1px solid rgba(255,255,255,0.25)",
 };
-
-const btnNavy: React.CSSProperties = {
-  display: "inline-block",
-  backgroundColor: "#0F1B33",
-  color: "#ffffff",
-  fontFamily: "Inter, sans-serif",
-  fontWeight: 600,
-  fontSize: 15,
-  textDecoration: "none",
-  padding: "13px 26px",
-  borderRadius: 8,
-};

@@ -1229,20 +1229,6 @@ const btnPrimary: React.CSSProperties = {
   letterSpacing: "0.2px",
 };
 
-const btnSecondary: React.CSSProperties = {
-  display: "inline-block",
-  backgroundColor: "rgba(255,255,255,0.1)",
-  color: "#ffffff",
-  fontFamily: "Inter, sans-serif",
-  fontWeight: 600,
-  fontSize: 16,
-  textDecoration: "none",
-  padding: "14px 28px",
-  borderRadius: 8,
-  border: "1px solid rgba(255,255,255,0.25)",
-  transition: "background-color 0.2s",
-};
-
 const btnNavy: React.CSSProperties = {
   display: "inline-block",
   backgroundColor: "#0F1B33",
