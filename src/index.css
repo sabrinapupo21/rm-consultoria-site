@@ -29,6 +29,7 @@
 :root {
   --background: #f8f7f4;
   --foreground: #111827;
+  color-scheme: light;
   --card: #ffffff;
   --card-foreground: #111827;
   --primary: #0f1b33;
