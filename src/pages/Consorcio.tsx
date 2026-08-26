@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 const WHATSAPP_CONSORCIO =
   "https://wa.me/5518999999999?text=Olá%2C%20Renata!%20Gostaria%20de%20simular%20um%20consórcio%20imobiliário.";
@@ -12,7 +11,7 @@ export default function Consorcio() {
         style={{
           backgroundColor: "#0F1B33",
           backgroundImage:
-            "radial-gradient(ellipse 80% 70% at 80% 30%, rgba(201,151,75,0.13) 0%, transparent 55%)",
+            "radial-gradient(ellipse 70% 80% at 90% 40%, rgba(13,100,200,0.25) 0%, transparent 60%)",
           paddingTop: 68,
           minHeight: "85vh",
           display: "flex",
@@ -91,14 +90,6 @@ export default function Consorcio() {
                   style={btnAmber}
                 >
                   Simular meu consórcio →
-                </a>
-                <a
-                  href={WHATSAPP_CONSORCIO}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={btnGhost}
-                >
-                  Falar no WhatsApp
                 </a>
               </div>
             </div>
@@ -454,19 +445,6 @@ export default function Consorcio() {
           >
             Simular no WhatsApp →
           </a>
-          <div style={{ marginTop: 20 }}>
-            <Link
-              to="/"
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontSize: 14,
-                color: "#6b7280",
-                textDecoration: "none",
-              }}
-            >
-              ← Voltar para início
-            </Link>
-          </div>
         </div>
       </section>
     </>
@@ -611,17 +589,4 @@ const btnAmberLarge: React.CSSProperties = {
   textDecoration: "none",
   padding: "16px 36px",
   borderRadius: 8,
-};
-
-const btnGhost: React.CSSProperties = {
-  display: "inline-block",
-  backgroundColor: "rgba(255,255,255,0.1)",
-  color: "#ffffff",
-  fontFamily: "Inter, sans-serif",
-  fontWeight: 600,
-  fontSize: 16,
-  textDecoration: "none",
-  padding: "14px 28px",
-  borderRadius: 8,
-  border: "1px solid rgba(255,255,255,0.25)",
 };

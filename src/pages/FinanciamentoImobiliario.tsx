@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 
 const WHATSAPP =
   "https://wa.me/5518999999999?text=Olá%2C%20Renata!%20Gostaria%20de%20saber%20mais%20sobre%20financiamento%20imobiliário.";
@@ -28,22 +27,6 @@ export default function FinanciamentoImobiliario() {
           }}
         >
           <div style={{ maxWidth: 680 }}>
-            <Link
-              to="/"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 6,
-                fontFamily: "Inter, sans-serif",
-                fontSize: 13,
-                color: "rgba(255,255,255,0.55)",
-                textDecoration: "none",
-                marginBottom: 32,
-              }}
-            >
-              ← Início
-            </Link>
-
             <h1
               style={{
                 fontFamily: '"DM Serif Display", serif',
@@ -83,14 +66,6 @@ export default function FinanciamentoImobiliario() {
                 style={btnAmber}
               >
                 Simular financiamento →
-              </a>
-              <a
-                href={WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={btnGhost}
-              >
-                Falar no WhatsApp
               </a>
             </div>
           </div>
@@ -369,19 +344,6 @@ export default function FinanciamentoImobiliario() {
           >
             Falar com a RM sobre financiamento →
           </a>
-          <div style={{ marginTop: 24 }}>
-            <Link
-              to="/"
-              style={{
-                fontFamily: "Inter, sans-serif",
-                fontSize: 14,
-                color: "rgba(255,255,255,0.45)",
-                textDecoration: "none",
-              }}
-            >
-              ← Voltar para início
-            </Link>
-          </div>
         </div>
       </section>
     </>
@@ -497,17 +459,4 @@ const btnAmber: React.CSSProperties = {
   textDecoration: "none",
   padding: "14px 28px",
   borderRadius: 8,
-};
-
-const btnGhost: React.CSSProperties = {
-  display: "inline-block",
-  backgroundColor: "rgba(255,255,255,0.1)",
-  color: "#ffffff",
-  fontFamily: "Inter, sans-serif",
-  fontWeight: 600,
-  fontSize: 16,
-  textDecoration: "none",
-  padding: "14px 28px",
-  borderRadius: 8,
-  border: "1px solid rgba(255,255,255,0.25)",
 };

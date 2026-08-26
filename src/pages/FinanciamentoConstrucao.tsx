@@ -12,7 +12,7 @@ export default function FinanciamentoConstrucao() {
         style={{
           backgroundColor: "#0F1B33",
           backgroundImage:
-            "radial-gradient(ellipse 60% 80% at 20% 60%, rgba(232,150,10,0.1) 0%, transparent 55%)",
+            "radial-gradient(ellipse 70% 80% at 90% 40%, rgba(13,100,200,0.25) 0%, transparent 60%)",
           paddingTop: 68,
           minHeight: "70vh",
           display: "flex",
@@ -37,22 +37,6 @@ export default function FinanciamentoConstrucao() {
             className="resp-grid-c"
           >
             <div>
-              <Link
-                to="/"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
-                  fontFamily: "Outfit, sans-serif",
-                  fontSize: 13,
-                  color: "rgba(255,255,255,0.5)",
-                  textDecoration: "none",
-                  marginBottom: 32,
-                }}
-              >
-                ← Início
-              </Link>
-
               <h1
                 style={{
                   fontFamily: '"DM Serif Display", serif',
@@ -451,19 +435,6 @@ export default function FinanciamentoConstrucao() {
           >
             Conversar sobre financiamento de construção →
           </a>
-          <div style={{ marginTop: 24 }}>
-            <Link
-              to="/"
-              style={{
-                fontFamily: "Outfit, sans-serif",
-                fontSize: 14,
-                color: "rgba(255,255,255,0.4)",
-                textDecoration: "none",
-              }}
-            >
-              ← Voltar para início
-            </Link>
-          </div>
         </div>
       </section>
     </>
