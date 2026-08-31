@@ -48,7 +48,7 @@ export default function FinanciamentoConstrucao() {
                 }}
               >
                 Terreno próprio ou aquisição de terreno:{" "}
-                <em style={{ color: "#f5b832", fontStyle: "italic" }}>
+                <em style={{ color: "#C9974B", fontStyle: "italic" }}>
                   conte com financiamento para tirar sua construção do papel.
                 </em>
               </h1>

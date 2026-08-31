@@ -1218,15 +1218,14 @@ import React from "react";
 
 const btnPrimary: React.CSSProperties = {
   display: "inline-block",
-  backgroundColor: "#F4EEE3",
+  backgroundColor: "#C9974B",
   color: "#0F1B33",
   fontFamily: "Inter, sans-serif",
-  fontWeight: 700,
+  fontWeight: 600,
   fontSize: 16,
   textDecoration: "none",
-  padding: "14px 32px",
+  padding: "14px 28px",
   borderRadius: 8,
-  letterSpacing: "0.2px",
 };
 
 const btnNavy: React.CSSProperties = {

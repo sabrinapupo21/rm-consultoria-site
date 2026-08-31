@@ -39,7 +39,7 @@ export default function FinanciamentoImobiliario() {
               }}
             >
               Financiamento Imobiliário com orientação de uma{" "}
-              <em style={{ color: "#f5b832", fontStyle: "italic" }}>
+              <em style={{ color: "#C9974B", fontStyle: "italic" }}>
                 correspondente CAIXA
               </em>
             </h1>
