@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 
-const WHATSAPP =
-  "https://wa.me/5518999999999?text=Olá%2C%20Renata!%20Quero%20saber%20mais%20sobre%20as%20soluções%20da%20RM%20Consultoria.";
-const INSTAGRAM = "https://instagram.com/rmconsultoriaimobiliaria";
+const WHATSAPP = "https://wa.me/5518997252891";
+const INSTAGRAM = "https://instagram.com/renata_maia_cca";
 
 export default function Footer() {
   return (
