@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
-
-const WHATSAPP =
-  "https://wa.me/5518999999999?text=Olá%2C%20Renata!%20Quero%20saber%20mais%20sobre%20as%20soluções%20da%20RM%20Consultoria.";
-
+import fotoRenata from "../assets/photos/fotoRenata.png";
+const WHATSAPP = "https://wa.me/5518997252891";
 export default function Home() {
   return (
     <>
@@ -103,6 +101,27 @@ export default function Home() {
                   rel="noopener noreferrer"
                   style={btnPrimary}
                 >
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    {/* Balão externo - só contorno, sem preenchimento */}
+                    <path
+                      d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    {/* Telefone interno - preenchido */}
+                    <path
+                      d="M17.87 16.09c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.1.19-.15.3-.29.46-.15.17-.31.37-.44.5-.14.14-.29.29-.13.58.16.29.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.25 1.38.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.65.78 1.93.92.29.14.48.21.55.33.07.12.07.68-.17 1.36z"
+                      fill="currentColor"
+                    />
+                  </svg>
                   Falar com a RM →
                 </a>
               </div>
@@ -719,7 +738,6 @@ export default function Home() {
             display: "grid",
             gridTemplateColumns: "1fr 1.4fr",
             gap: "48px 80px",
-            alignItems: "center",
           }}
           className="split-grid"
         >
@@ -728,13 +746,18 @@ export default function Home() {
               borderRadius: 20,
               overflow: "hidden",
               backgroundColor: "#d1e0f5",
-              aspectRatio: "3/4",
+              height: "100%,",
             }}
           >
             <img
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&h=660&fit=crop&auto=format"
+              src={fotoRenata}
               alt="Renata Maia, consultora de crédito imobiliário em Araçatuba"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "10% center",
+              }}
             />
           </div>
 
@@ -1215,17 +1238,23 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
 }
 
 import React from "react";
-
 const btnPrimary: React.CSSProperties = {
-  display: "inline-block",
-  backgroundColor: "#C9974B",
-  color: "#0F1B33",
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  gap: 8,
+  backgroundColor: "#25D366", // verde oficial do WhatsApp
+  color: "#FFFFFF",
   fontFamily: "Inter, sans-serif",
-  fontWeight: 600,
+  fontWeight: 500,
   fontSize: 16,
   textDecoration: "none",
   padding: "14px 28px",
   borderRadius: 8,
+  border: "none",
+  cursor: "pointer",
+  boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
+  transition: "background-color 0.2s ease, transform 0.1s ease",
 };
 
 const btnNavy: React.CSSProperties = {
