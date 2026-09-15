@@ -453,7 +453,13 @@ export default function FinanciamentoConstrucao() {
             rel="noopener noreferrer"
             style={btnPrimaryLarge}
           >
-            <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              style={{ flexShrink: 0 }}
+            >
               {/* Balão externo - só contorno, sem preenchimento */}
               <path
                 d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"
@@ -469,7 +475,7 @@ export default function FinanciamentoConstrucao() {
                 fill="currentColor"
               />
             </svg>
-            Conversar sobre financiamento de construção →
+            Conversar sobre financiamento de construção&nbsp;→
           </a>
         </div>
       </section>
@@ -599,10 +605,10 @@ const btnPrimary: React.CSSProperties = {
 
 const btnPrimaryLarge: React.CSSProperties = {
   ...btnPrimary,
-  width: "auto",
-  maxWidth: "280px",
   whiteSpace: "normal",
   textAlign: "center",
-  lineHeight: 1.25,
-  padding: "14px 24px",
+  width: "100%",
+  maxWidth: "100%", // Remove a limitação de -32px herdada em telas pequenas
+  padding: "14px 16px", // Padding interno menor para dar mais espaço ao texto
+  boxSizing: "border-box",
 };
