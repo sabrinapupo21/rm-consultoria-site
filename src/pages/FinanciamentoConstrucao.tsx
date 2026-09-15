@@ -581,7 +581,7 @@ const btnPrimary: React.CSSProperties = {
   alignItems: "center",
   justifyContent: "center",
   gap: 8,
-  backgroundColor: "#25D366", // verde oficial do WhatsApp
+  backgroundColor: "#25D366",
   color: "#FFFFFF",
   fontFamily: "Inter, sans-serif",
   fontWeight: 500,
@@ -594,5 +594,8 @@ const btnPrimary: React.CSSProperties = {
   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
   transition: "background-color 0.2s ease, transform 0.1s ease",
   whiteSpace: "nowrap",
-  maxWidth: "100%",
+  maxWidth: "calc(100vw - 48px)",
+  boxSizing: "border-box",
+  overflow: "hidden",
+  textOverflow: "ellipsis",
 };
