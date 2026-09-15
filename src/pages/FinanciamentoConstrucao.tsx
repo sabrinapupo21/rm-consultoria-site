@@ -601,4 +601,6 @@ const btnPrimaryLarge: React.CSSProperties = {
   whiteSpace: "normal",
   textAlign: "center",
   maxWidth: "100%",
+  width: 320,
+  lineHeight: 1.3,
 };
