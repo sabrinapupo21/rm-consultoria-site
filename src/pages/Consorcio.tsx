@@ -35,20 +35,6 @@ export default function Consorcio() {
             className="resp-grid"
           >
             <div>
-              <div style={badgeStyle}>
-                <span style={{ color: "#C9974B" }}>★</span>
-                <span
-                  style={{
-                    fontFamily: "Inter, sans-serif",
-                    fontWeight: 500,
-                    fontSize: 13,
-                    color: "#C9974B",
-                  }}
-                >
-                  Destino principal das campanhas Google Ads
-                </span>
-              </div>
-
               <h1
                 style={{
                   fontFamily: '"DM Serif Display", serif',
@@ -584,17 +570,6 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
   );
 }
 
-const badgeStyle: React.CSSProperties = {
-  display: "inline-flex",
-  alignItems: "center",
-  gap: 8,
-  backgroundColor: "rgba(201,151,75,0.15)",
-  border: "1px solid rgba(201,151,75,0.35)",
-  borderRadius: 100,
-  padding: "5px 14px 5px 12px",
-  marginBottom: 28,
-};
-
 const sectionH2: React.CSSProperties = {
   fontFamily: "Fraunces, serif",
   fontWeight: 700,
@@ -620,4 +595,5 @@ const btnPrimary: React.CSSProperties = {
   cursor: "pointer",
   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
   transition: "background-color 0.2s ease, transform 0.1s ease",
+  whiteSpace: "nowrap",
 };
