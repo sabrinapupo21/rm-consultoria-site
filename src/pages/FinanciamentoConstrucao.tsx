@@ -575,7 +575,6 @@ const sectionH2: React.CSSProperties = {
   lineHeight: 1.15,
   letterSpacing: "-0.5px",
 };
-
 const btnPrimary: React.CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
@@ -595,12 +594,14 @@ const btnPrimary: React.CSSProperties = {
   transition: "background-color 0.2s ease, transform 0.1s ease",
   whiteSpace: "nowrap",
   boxSizing: "border-box",
+  maxWidth: "calc(100% - 32px)",
 };
+
 const btnPrimaryLarge: React.CSSProperties = {
   ...btnPrimary,
+  width: 320,
+  maxWidth: "calc(100% - 32px)",
   whiteSpace: "normal",
   textAlign: "center",
-  maxWidth: "100%",
-  width: 320,
   lineHeight: 1.3,
 };
