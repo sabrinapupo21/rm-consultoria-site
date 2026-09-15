@@ -594,26 +594,3 @@ const btnPrimary: React.CSSProperties = {
   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
   transition: "background-color 0.2s ease, transform 0.1s ease",
 };
-const btnAmber: React.CSSProperties = {
-  display: "inline-block",
-  backgroundColor: "#C9974B",
-  color: "#0F1B33",
-  fontFamily: "Inter, sans-serif",
-  fontWeight: 600,
-  fontSize: 16,
-  textDecoration: "none",
-  padding: "14px 28px",
-  borderRadius: 8,
-};
-
-const btnAmberLarge: React.CSSProperties = {
-  display: "inline-block",
-  backgroundColor: "#C9974B",
-  color: "#0F1B33",
-  fontFamily: "Inter, sans-serif",
-  fontWeight: 600,
-  fontSize: 17,
-  textDecoration: "none",
-  padding: "16px 36px",
-  borderRadius: 8,
-};
