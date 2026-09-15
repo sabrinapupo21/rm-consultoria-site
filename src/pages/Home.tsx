@@ -1,7 +1,44 @@
+import React from "react";
 import { Link } from "react-router-dom";
 import fotoRenata from "../assets/photos/fotoRenata.png";
+
 const WHATSAPP = "https://wa.me/5518997252891";
+
 export default function Home() {
+  const depoimentosRef = React.useRef<HTMLDivElement>(null);
+  const testimonials = [
+    {
+      name: "Kellen R.",
+      city: "Araçatuba, SP",
+      text: "Sei que não foi um processo simples, mas graças à dedicação e ao suporte de vocês, conseguimos chegar até aqui. Sou muito grata por todo o auxílio, atenção e paciência durante esse caminho.",
+    },
+    {
+      name: "Emmeli F.",
+      city: "Araçatuba, SP",
+      text: "Muito obrigada por caminhar com a gente rumo à nossa casa nova! A dedicação e o trabalho de vocês foram fundamentais para o sucesso dessa conquista.",
+    },
+    {
+      name: "Jaciara O.",
+      city: "Araçatuba, SP",
+      text: "Tem um dedinho de vocês nos sonhos de muita gente, até então eu sempre quis muito ter a minha casinha, mas nada se compara a sensação de ler a mensagem 'processo finalizado'. Gratidão se resume.",
+    },
+    {
+      name: "Gleise S.",
+      city: "Araçatuba, SP",
+      text: "Re, queria agradecer pelo seu atendimento de qualidade e rico em detalhes que nos prestou desde o primeiro contato! Você é diferenciada, muito obrigada! ",
+    },
+    {
+      name: "Jaqueline R.",
+      city: "Araçatuba, SP",
+      text: "Gostaria de expressar minha profunda gratidão a todos que contribuíram e estivaram ao meu lado na realização da compra do meu imóvel. Obrigada pelo trabalho e dedicação de cada um de vocês!",
+    },
+    {
+      name: "Maria F.",
+      city: "São Paulo, SP",
+      text: "Não tenho palavras para agradecer todo empenho, cuidado e dedicação de vocês. Muito obrigada!",
+    },
+  ];
+
   return (
     <>
       <section
@@ -463,7 +500,7 @@ export default function Home() {
                       style={{
                         fontFamily: "Inter, sans-serif",
                         fontSize: 13,
-                        color: "rgba(255,255,255,0.5)",
+                        color: "rgba(255,255,255,0.7)",
                         marginBottom: 4,
                       }}
                     >
@@ -473,7 +510,7 @@ export default function Home() {
                       style={{
                         fontFamily: "Inter, sans-serif",
                         fontSize: 12,
-                        color: "rgba(255,255,255,0.4)",
+                        color: "rgba(255,255,255,0.6)",
                       }}
                     >
                       {stat.sub}
@@ -533,7 +570,7 @@ export default function Home() {
                 marginTop: 32,
               }}
             >
-              <Link to="/financiamento-imobiliario" style={btnNavy}>
+              <Link to="/financiamento-imobiliario" style={btnAmber}>
                 Conhecer financiamento →
               </Link>
             </div>
@@ -581,7 +618,7 @@ export default function Home() {
               completa — incluindo a compra do terreno para quem ainda não tem.
             </p>
             <div style={{ marginTop: 32 }}>
-              <Link to="/financiamento-construcao" style={btnNavy}>
+              <Link to="/financiamento-construcao" style={btnAmber}>
                 Conhecer financiamento para construção →
               </Link>
             </div>
@@ -783,7 +820,7 @@ export default function Home() {
               borderRadius: 20,
               overflow: "hidden",
               backgroundColor: "#d1e0f5",
-              height: "100%,",
+              height: "100%",
             }}
           >
             <img
@@ -900,102 +937,373 @@ export default function Home() {
       {/* ── DEPOIMENTOS ── */}
       <section
         id="depoimentos"
-        style={{ backgroundColor: "#0F1B33", padding: "96px 24px" }}
+        style={{
+          backgroundColor: "#0F1B33",
+          padding: "96px 24px",
+        }}
       >
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: 64 }}>
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+          }}
+        >
+          {/* TÍTULO */}
+          <div
+            style={{
+              textAlign: "center",
+              marginBottom: 48,
+            }}
+          >
             <SectionLabel light>Depoimentos</SectionLabel>
+
             <h2
               style={{
-                fontFamily: "Fraunces, serif",
-                fontWeight: 700,
-                fontSize: "clamp(26px, 4vw, 40px)",
-                color: "#ffffff",
+                color: "#FFFFFF",
+                fontFamily: "Playfair Display, serif",
+                fontSize: "clamp(32px, 4vw, 52px)",
+                fontWeight: 500,
                 lineHeight: 1.15,
-                letterSpacing: "-0.5px",
+                margin: "16px 0 0",
               }}
             >
               O que dizem nossos clientes
             </h2>
           </div>
 
+          {/* CARROSSEL */}
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-              gap: 28,
+              position: "relative",
+              width: "100%",
             }}
           >
-            {[
-              {
-                name: "Ana C.",
-                city: "Araçatuba, SP",
-                text: "A Renata foi incrível do começo ao fim. Me explicou tudo sobre o consórcio com paciência, me ajudou na estratégia de lance e finalmente realizei o sonho da casa própria.",
-              },
-              {
-                name: "Marcos T.",
-                city: "São Paulo, SP",
-                text: "Não sabia nada sobre financiamento e ela me orientou em cada detalhe. Consegui aprovação rápida e com condições que eu não esperava. Super recomendo!",
-              },
-              {
-                name: "Família Rodrigues",
-                city: "Birigui, SP",
-                text: "Queríamos construir no terreno do meu pai. A RM nos mostrou um caminho que nem sabíamos que existia. Obra começando em breve!",
-              },
-            ].map((t) => (
-              <div
-                key={t.name}
-                style={{
-                  backgroundColor: "rgba(255,255,255,0.07)",
-                  border: "1px solid rgba(255,255,255,0.1)",
-                  borderRadius: 16,
-                  padding: 32,
-                }}
-              >
-                <div style={{ display: "flex", gap: 4, marginBottom: 18 }}>
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <span key={s} style={{ color: "#C9974B", fontSize: 16 }}>
-                      ★
-                    </span>
-                  ))}
-                </div>
-                <p
+            {/* SETA ESQUERDA */}
+            <button
+              type="button"
+              aria-label="Depoimentos anteriores"
+              onClick={() => {
+                depoimentosRef.current?.scrollBy({
+                  left: -380,
+                  behavior: "smooth",
+                });
+              }}
+              style={{
+                position: "absolute",
+                left: -18,
+                top: "50%",
+                transform: "translateY(-50%)",
+                zIndex: 10,
+
+                width: 52,
+                height: 52,
+                borderRadius: "50%",
+
+                border: "1px solid rgba(201,151,75,0.7)",
+                backgroundColor: "#0F1B33",
+                color: "#C9974B",
+
+                fontSize: 30,
+                lineHeight: 1,
+
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+
+                cursor: "pointer",
+
+                transition: "all 0.25s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#C9974B";
+                e.currentTarget.style.color = "#0F1B33";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#0F1B33";
+                e.currentTarget.style.color = "#C9974B";
+              }}
+            >
+              ←
+            </button>
+
+            {/* ÁREA ARRASTÁVEL */}
+            <div
+              ref={depoimentosRef}
+              className="depoimentos-carrossel"
+              style={{
+                display: "flex",
+                gap: 24,
+
+                overflowX: "auto",
+                overflowY: "hidden",
+
+                scrollBehavior: "smooth",
+
+                padding: "10px 4px 28px",
+
+                cursor: "grab",
+
+                scrollbarWidth: "none",
+
+                WebkitOverflowScrolling: "touch",
+
+                userSelect: "none",
+              }}
+              onMouseDown={(e) => {
+                const slider = e.currentTarget;
+
+                slider.dataset.isDown = "true";
+                slider.dataset.startX = String(e.pageX - slider.offsetLeft);
+                slider.dataset.scrollLeft = String(slider.scrollLeft);
+
+                slider.style.cursor = "grabbing";
+                slider.style.scrollBehavior = "auto";
+              }}
+              onMouseMove={(e) => {
+                const slider = e.currentTarget;
+
+                if (slider.dataset.isDown !== "true") return;
+
+                e.preventDefault();
+
+                const x = e.pageX - slider.offsetLeft;
+                const startX = Number(slider.dataset.startX);
+                const scrollLeft = Number(slider.dataset.scrollLeft);
+
+                const walk = (x - startX) * 1.2;
+
+                slider.scrollLeft = scrollLeft - walk;
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.dataset.isDown = "false";
+                e.currentTarget.style.cursor = "grab";
+                e.currentTarget.style.scrollBehavior = "smooth";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.dataset.isDown = "false";
+                e.currentTarget.style.cursor = "grab";
+                e.currentTarget.style.scrollBehavior = "smooth";
+              }}
+              onTouchStart={(e) => {
+                const slider = e.currentTarget;
+
+                slider.dataset.isDown = "true";
+                slider.dataset.startX = String(
+                  e.touches[0].pageX - slider.offsetLeft,
+                );
+                slider.dataset.scrollLeft = String(slider.scrollLeft);
+
+                slider.style.scrollBehavior = "auto";
+              }}
+              onTouchMove={(e) => {
+                const slider = e.currentTarget;
+
+                if (slider.dataset.isDown !== "true") return;
+
+                const x = e.touches[0].pageX - slider.offsetLeft;
+                const startX = Number(slider.dataset.startX);
+                const scrollLeft = Number(slider.dataset.scrollLeft);
+
+                const walk = (x - startX) * 1.2;
+
+                slider.scrollLeft = scrollLeft - walk;
+              }}
+              onTouchEnd={(e) => {
+                e.currentTarget.dataset.isDown = "false";
+                e.currentTarget.style.scrollBehavior = "smooth";
+              }}
+            >
+              {testimonials.map((t, index) => (
+                <article
+                  key={`${t.name}-${index}`}
                   style={{
-                    fontFamily: "Inter, sans-serif",
-                    fontSize: 16,
-                    color: "rgba(255,255,255,0.8)",
-                    lineHeight: 1.7,
-                    marginBottom: 24,
-                    fontStyle: "italic",
+                    flex: "0 0 360px",
+
+                    backgroundColor: "#FFFFFF",
+
+                    borderRadius: 4,
+
+                    padding: "36px 32px",
+
+                    minHeight: 250,
+
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+
+                    boxSizing: "border-box",
+
+                    boxShadow: "0 12px 35px rgba(0,0,0,0.12)",
                   }}
                 >
-                  "{t.text}"
-                </p>
-                <div>
+                  {/* ASPAS */}
                   <div
                     style={{
-                      fontFamily: "Inter, sans-serif",
-                      fontWeight: 600,
-                      fontSize: 15,
-                      color: "#ffffff",
+                      color: "#C9974B",
+                      fontFamily: "Georgia, serif",
+                      fontSize: 48,
+                      lineHeight: 0.8,
+                      marginBottom: 18,
                     }}
                   >
-                    {t.name}
+                    “
                   </div>
+
+                  {/* TEXTO */}
+                  <p
+                    style={{
+                      margin: 0,
+
+                      color: "#26344D",
+
+                      fontFamily: "Inter, sans-serif",
+
+                      fontSize: 16,
+
+                      lineHeight: 1.7,
+                    }}
+                  >
+                    {t.text}
+                  </p>
+
+                  {/* CLIENTE */}
                   <div
                     style={{
-                      fontFamily: "Inter, sans-serif",
-                      fontSize: 13,
-                      color: "rgba(255,255,255,0.45)",
+                      marginTop: 28,
+
+                      paddingTop: 20,
+
+                      borderTop: "1px solid #E7E2D8",
                     }}
                   >
-                    {t.city}
+                    <strong
+                      style={{
+                        display: "block",
+
+                        color: "#0F1B33",
+
+                        fontFamily: "Inter, sans-serif",
+
+                        fontSize: 15,
+
+                        fontWeight: 700,
+                      }}
+                    >
+                      {t.name}
+                    </strong>
+
+                    <span
+                      style={{
+                        display: "block",
+
+                        marginTop: 5,
+
+                        color: "#7A8190",
+
+                        fontFamily: "Inter, sans-serif",
+
+                        fontSize: 13,
+                      }}
+                    >
+                      {t.city}
+                    </span>
                   </div>
-                </div>
-              </div>
-            ))}
+                </article>
+              ))}
+            </div>
+
+            {/* SETA DIREITA */}
+            <button
+              type="button"
+              aria-label="Próximos depoimentos"
+              onClick={() => {
+                depoimentosRef.current?.scrollBy({
+                  left: 380,
+                  behavior: "smooth",
+                });
+              }}
+              style={{
+                position: "absolute",
+                right: -18,
+                top: "50%",
+                transform: "translateY(-50%)",
+                zIndex: 10,
+
+                width: 52,
+                height: 52,
+                borderRadius: "50%",
+
+                border: "1px solid rgba(201,151,75,0.7)",
+                backgroundColor: "#0F1B33",
+                color: "#C9974B",
+
+                fontSize: 30,
+                lineHeight: 1,
+
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+
+                cursor: "pointer",
+
+                transition: "all 0.25s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#C9974B";
+                e.currentTarget.style.color = "#0F1B33";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#0F1B33";
+                e.currentTarget.style.color = "#C9974B";
+              }}
+            >
+              →
+            </button>
+          </div>
+
+          {/* INDICAÇÃO */}
+          <div
+            style={{
+              textAlign: "center",
+              marginTop: 8,
+
+              color: "rgba(255,255,255,0.45)",
+
+              fontFamily: "Inter, sans-serif",
+
+              fontSize: 13,
+            }}
+          >
+            Arraste para o lado para ver mais depoimentos
           </div>
         </div>
+
+        {/* ESCONDE A BARRA DE ROLAGEM */}
+        <style>
+          {`
+      .depoimentos-carrossel::-webkit-scrollbar {
+        display: none;
+      }
+
+      @media (max-width: 768px) {
+        .depoimentos-carrossel {
+          gap: 16px !important;
+          padding-left: 2px !important;
+          padding-right: 2px !important;
+        }
+
+        .depoimentos-carrossel article {
+          flex: 0 0 85vw !important;
+        }
+      }
+
+      @media (max-width: 500px) {
+        .depoimentos-carrossel article {
+          flex: 0 0 88vw !important;
+        }
+      }
+    `}
+        </style>
       </section>
 
       {/* ── FAQ ── */}
@@ -1311,7 +1619,6 @@ function FaqList({ items }: { items: { q: string; a: string }[] }) {
   );
 }
 
-import React from "react";
 const btnPrimary: React.CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
@@ -1329,19 +1636,6 @@ const btnPrimary: React.CSSProperties = {
   cursor: "pointer",
   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
   transition: "background-color 0.2s ease, transform 0.1s ease",
-};
-
-const btnNavy: React.CSSProperties = {
-  display: "inline-block",
-  backgroundColor: "#0F1B33",
-  color: "#ffffff",
-  fontFamily: "Inter, sans-serif",
-  fontWeight: 600,
-  fontSize: 15,
-  textDecoration: "none",
-  padding: "13px 26px",
-  borderRadius: 8,
-  transition: "background-color 0.2s, transform 0.15s",
 };
 
 const btnAmber: React.CSSProperties = {
