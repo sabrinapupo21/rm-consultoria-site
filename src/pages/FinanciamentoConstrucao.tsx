@@ -451,7 +451,7 @@ export default function FinanciamentoConstrucao() {
             href={WHATSAPP}
             target="_blank"
             rel="noopener noreferrer"
-            style={btnPrimary}
+            style={btnPrimaryLarge}
           >
             <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
               {/* Balão externo - só contorno, sem preenchimento */}
@@ -594,8 +594,11 @@ const btnPrimary: React.CSSProperties = {
   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
   transition: "background-color 0.2s ease, transform 0.1s ease",
   whiteSpace: "nowrap",
-  maxWidth: "calc(100vw - 48px)",
   boxSizing: "border-box",
-  overflow: "hidden",
-  textOverflow: "ellipsis",
+};
+const btnPrimaryLarge: React.CSSProperties = {
+  ...btnPrimary,
+  whiteSpace: "normal",
+  textAlign: "center",
+  maxWidth: "100%",
 };
