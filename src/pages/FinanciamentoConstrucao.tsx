@@ -599,9 +599,10 @@ const btnPrimary: React.CSSProperties = {
 
 const btnPrimaryLarge: React.CSSProperties = {
   ...btnPrimary,
-  width: 320,
-  maxWidth: "calc(100% - 32px)",
+  width: "auto",
+  maxWidth: "280px",
   whiteSpace: "normal",
   textAlign: "center",
-  lineHeight: 1.3,
+  lineHeight: 1.25,
+  padding: "14px 24px",
 };
