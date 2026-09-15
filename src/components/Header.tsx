@@ -3,8 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import logoRM from "../assets/logos/logo-rm-consultoria-dark.svg";
 import logoCaixaAqui from "../assets/logos/logo-caixa-aqui.svg";
 
-const WHATSAPP =
-  "https://wa.me/5518999999999?text=Olá%2C%20Renata!%20Quero%20saber%20mais%20sobre%20as%20soluções%20da%20RM%20Consultoria.";
+const WHATSAPP = "https://wa.me/5518997252891";
 
 const navLinks = [
   { label: "Início", to: "/" },
