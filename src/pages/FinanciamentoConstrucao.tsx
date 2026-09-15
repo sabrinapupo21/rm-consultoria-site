@@ -78,6 +78,7 @@ export default function FinanciamentoConstrucao() {
                   height="28"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
+                  style={{ flexShrink: 0 }}
                 >
                   {/* Balão externo - só contorno, sem preenchimento */}
                   <path
@@ -94,7 +95,9 @@ export default function FinanciamentoConstrucao() {
                     fill="currentColor"
                   />
                 </svg>
-                Falar sobre minha construção →
+                <span style={{ whiteSpace: "nowrap" }}>
+                  Falar sobre minha construção →
+                </span>
               </a>
             </div>
 
@@ -460,7 +463,7 @@ export default function FinanciamentoConstrucao() {
               aria-hidden="true"
               style={{ flexShrink: 0 }}
             >
-              {/* Balão externo - só contorno, sem preenchimento */}
+              {/* Balão externo */}
               <path
                 d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2z"
                 fill="none"
@@ -469,13 +472,16 @@ export default function FinanciamentoConstrucao() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
-              {/* Telefone interno - preenchido */}
+              {/* Telefone interno */}
               <path
                 d="M17.87 16.09c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.42.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2 .89 2.14.07.14.12.31.02.5-.1.19-.15.3-.29.46-.15.17-.31.37-.44.5-.14.14-.29.29-.13.58.16.29.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.25 1.38.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.38-.24.63-.14.26.1 1.65.78 1.93.92.29.14.48.21.55.33.07.12.07.68-.17 1.36z"
                 fill="currentColor"
               />
             </svg>
-            Conversar sobre financiamento de construção&nbsp;→
+            <span>
+              Conversar sobre financiamento{" "}
+              <span style={{ whiteSpace: "nowrap" }}>de construção →</span>
+            </span>
           </a>
         </div>
       </section>
@@ -585,30 +591,29 @@ const btnPrimary: React.CSSProperties = {
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  gap: 8,
+  gap: 12,
   backgroundColor: "#25D366",
   color: "#FFFFFF",
   fontFamily: "Inter, sans-serif",
   fontWeight: 500,
   fontSize: 16,
   textDecoration: "none",
-  padding: "14px 28px",
+  padding: "14px 20px",
   borderRadius: 8,
   border: "none",
   cursor: "pointer",
   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
   transition: "background-color 0.2s ease, transform 0.1s ease",
-  whiteSpace: "nowrap",
   boxSizing: "border-box",
-  maxWidth: "calc(100% - 32px)",
+  maxWidth: "100%",
 };
 
 const btnPrimaryLarge: React.CSSProperties = {
   ...btnPrimary,
+  width: "100%", // Força ocupar a largura inteira disponível
+  maxWidth: "100%",
+  padding: "14px 12px", // Encolhe o padding lateral para dar espaço ao texto
+  fontSize: 15, // Reduz 1px na fonte no mobile para caber em 2 linhas
   whiteSpace: "normal",
   textAlign: "center",
-  width: "100%",
-  maxWidth: "100%", // Remove a limitação de -32px herdada em telas pequenas
-  padding: "14px 16px", // Padding interno menor para dar mais espaço ao texto
-  boxSizing: "border-box",
 };
