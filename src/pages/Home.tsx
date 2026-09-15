@@ -1637,6 +1637,7 @@ const btnPrimary: React.CSSProperties = {
   boxShadow: "0 2px 5px rgba(0, 0, 0, 0.2)",
   transition: "background-color 0.2s ease, transform 0.1s ease",
   whiteSpace: "nowrap",
+  maxWidth: "100%",
 };
 
 const btnAmber: React.CSSProperties = {
