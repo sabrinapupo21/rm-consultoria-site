@@ -1,10 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import fotoRenata from "../assets/photos/fotoRenata.png";
-
+import SEO from "../components/SEO";
 const WHATSAPP = "https://wa.me/5518997252891";
 
 export default function Home() {
+  return (
+    <>
+      <SEO
+        title="RM Consultoria Imobiliária | Consórcio e Financiamento"
+        description="Consultoria especializada em consórcio imobiliário, financiamento imobiliário e financiamento de construção. Realize o sonho da casa própria com quem entende do assunto."
+        canonical="https://rmconsultoriaimobiliaria.com.br/"
+      />
+    </>
+  );
   const depoimentosRef = React.useRef<HTMLDivElement>(null);
   const testimonials = [
     {

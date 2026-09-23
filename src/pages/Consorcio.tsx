@@ -1,10 +1,15 @@
 import React, { useState } from "react";
-
+import SEO from "../components/SEO";
 const WHATSAPP_CONSORCIO = "https://wa.me/5518997252891";
 
 export default function Consorcio() {
   return (
     <>
+      <SEO
+        title="Consórcio Imobiliário | RM Consultoria"
+        description="Saiba como funciona o consórcio imobiliário e como conquistar seu imóvel sem juros, com parcelas que cabem no seu bolso."
+        canonical="https://rmconsultoriaimobiliaria.com.br/consorcio-imobiliario"
+      />
       {/* ── HERO ── */}
       <section
         style={{

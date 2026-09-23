@@ -1,11 +1,16 @@
 import React, { useState } from "react";
-
+import SEO from "../components/SEO";
 const WHATSAPP =
   "https://wa.me/5518999999999?text=Olá%2C%20Renata!%20Quero%20saber%20mais%20sobre%20financiamento%20para%20construção.";
 
 export default function FinanciamentoConstrucao() {
   return (
     <>
+      <SEO
+        title="Financiamento de Construção | RM Consultoria"
+        description="Financie a construção do seu imóvel com condições facilitadas e acompanhamento especializado da RM Consultoria."
+        canonical="https://rmconsultoriaimobiliaria.com.br/financiamento-construcao"
+      />
       {/* ── HERO ── */}
       <section
         style={{
