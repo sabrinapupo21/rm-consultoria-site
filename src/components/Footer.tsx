@@ -123,8 +123,8 @@ export default function Footer() {
         }}
       >
         <span>
-          © 2025 RM Consultoria Imobiliária — Renata Maia. Todos os direitos
-          reservados.
+          ©2026 RM Consultoria e Pesquisa no Mercado Imobiliario LTDA. Todos os
+          direitos reservados.
         </span>
         <span>Correspondente bancária CAIXA | Crédito imobiliário</span>
       </div>
