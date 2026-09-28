@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SEO from "../components/SEO";
-const WHATSAPP =
-  "https://wa.me/5518999999999?text=Olá%2C%20Renata!%20Gostaria%20de%20saber%20mais%20sobre%20financiamento%20imobiliário.";
+const WHATSAPP = "https://wa.me/5518997252891";
 
 export default function FinanciamentoImobiliario() {
   return (
