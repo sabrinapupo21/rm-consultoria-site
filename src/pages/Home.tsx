@@ -2,43 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import fotoRenata from "../assets/photos/fotoRenata.png";
 import SEO from "../components/SEO";
+import Carousel from "../components/Carousel";
 const WHATSAPP = "https://wa.me/5518997252891";
 
 export default function Home() {
-  const depoimentosRef = React.useRef<HTMLDivElement>(null);
-  const testimonials = [
-    {
-      name: "Kellen R.",
-      city: "Araçatuba, SP",
-      text: "Sei que não foi um processo simples, mas graças à dedicação e ao suporte de vocês, conseguimos chegar até aqui. Sou muito grata por todo o auxílio, atenção e paciência durante esse caminho.",
-    },
-    {
-      name: "Emmeli F.",
-      city: "Araçatuba, SP",
-      text: "Muito obrigada por caminhar com a gente rumo à nossa casa nova! A dedicação e o trabalho de vocês foram fundamentais para o sucesso dessa conquista.",
-    },
-    {
-      name: "Jaciara O.",
-      city: "Araçatuba, SP",
-      text: "Tem um dedinho de vocês nos sonhos de muita gente, até então eu sempre quis muito ter a minha casinha, mas nada se compara a sensação de ler a mensagem 'processo finalizado'. Gratidão se resume.",
-    },
-    {
-      name: "Gleise S.",
-      city: "Araçatuba, SP",
-      text: "Re, queria agradecer pelo seu atendimento de qualidade e rico em detalhes que nos prestou desde o primeiro contato! Você é diferenciada, muito obrigada! ",
-    },
-    {
-      name: "Jaqueline R.",
-      city: "Araçatuba, SP",
-      text: "Gostaria de expressar minha profunda gratidão a todos que contribuíram e estivaram ao meu lado na realização da compra do meu imóvel. Obrigada pelo trabalho e dedicação de cada um de vocês!",
-    },
-    {
-      name: "Maria F.",
-      city: "São Paulo, SP",
-      text: "Não tenho palavras para agradecer todo empenho, cuidado e dedicação de vocês. Muito obrigada!",
-    },
-  ];
-
   return (
     <>
       <SEO
@@ -957,315 +924,29 @@ export default function Home() {
           <div
             style={{
               textAlign: "center",
-              marginBottom: 48,
+              marginBottom: 32,
             }}
           >
             <SectionLabel light>Depoimentos</SectionLabel>
-
-            <h2
-              style={{
-                color: "#FFFFFF",
-                fontFamily: "Playfair Display, serif",
-                fontSize: "clamp(32px, 4vw, 52px)",
-                fontWeight: 500,
-                lineHeight: 1.15,
-                margin: "16px 0 0",
-              }}
-            >
-              O que dizem nossos clientes
-            </h2>
           </div>
-
-          {/* CARROSSEL */}
-          <div
-            style={{
-              position: "relative",
-              width: "100%",
-            }}
-          >
-            {/* SETA ESQUERDA */}
-            <button
-              type="button"
-              aria-label="Depoimentos anteriores"
-              onClick={() => {
-                depoimentosRef.current?.scrollBy({
-                  left: -380,
-                  behavior: "smooth",
-                });
-              }}
-              style={{
-                position: "absolute",
-                left: -18,
-                top: "50%",
-                transform: "translateY(-50%)",
-                zIndex: 10,
-
-                width: 52,
-                height: 52,
-                borderRadius: "50%",
-
-                border: "1px solid rgba(201,151,75,0.7)",
-                backgroundColor: "#0F1B33",
-                color: "#C9974B",
-
-                fontSize: 30,
-                lineHeight: 1,
-
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-
-                cursor: "pointer",
-
-                transition: "all 0.25s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#C9974B";
-                e.currentTarget.style.color = "#0F1B33";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#0F1B33";
-                e.currentTarget.style.color = "#C9974B";
-              }}
-            >
-              ←
-            </button>
-
-            {/* ÁREA ARRASTÁVEL */}
-            <div
-              ref={depoimentosRef}
-              className="depoimentos-carrossel"
-              style={{
-                display: "flex",
-                gap: 24,
-
-                overflowX: "auto",
-                overflowY: "hidden",
-
-                scrollBehavior: "smooth",
-
-                padding: "10px 4px 28px",
-
-                cursor: "grab",
-
-                scrollbarWidth: "none",
-
-                WebkitOverflowScrolling: "touch",
-
-                userSelect: "none",
-              }}
-              onMouseDown={(e) => {
-                const slider = e.currentTarget;
-
-                slider.dataset.isDown = "true";
-                slider.dataset.startX = String(e.pageX - slider.offsetLeft);
-                slider.dataset.scrollLeft = String(slider.scrollLeft);
-
-                slider.style.cursor = "grabbing";
-                slider.style.scrollBehavior = "auto";
-              }}
-              onMouseMove={(e) => {
-                const slider = e.currentTarget;
-
-                if (slider.dataset.isDown !== "true") return;
-
-                e.preventDefault();
-
-                const x = e.pageX - slider.offsetLeft;
-                const startX = Number(slider.dataset.startX);
-                const scrollLeft = Number(slider.dataset.scrollLeft);
-
-                const walk = (x - startX) * 1.2;
-
-                slider.scrollLeft = scrollLeft - walk;
-              }}
-              onMouseUp={(e) => {
-                e.currentTarget.dataset.isDown = "false";
-                e.currentTarget.style.cursor = "grab";
-                e.currentTarget.style.scrollBehavior = "smooth";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.dataset.isDown = "false";
-                e.currentTarget.style.cursor = "grab";
-                e.currentTarget.style.scrollBehavior = "smooth";
-              }}
-              onTouchStart={(e) => {
-                const slider = e.currentTarget;
-
-                slider.dataset.isDown = "true";
-                slider.dataset.startX = String(
-                  e.touches[0].pageX - slider.offsetLeft,
-                );
-                slider.dataset.scrollLeft = String(slider.scrollLeft);
-
-                slider.style.scrollBehavior = "auto";
-              }}
-              onTouchMove={(e) => {
-                const slider = e.currentTarget;
-
-                if (slider.dataset.isDown !== "true") return;
-
-                const x = e.touches[0].pageX - slider.offsetLeft;
-                const startX = Number(slider.dataset.startX);
-                const scrollLeft = Number(slider.dataset.scrollLeft);
-
-                const walk = (x - startX) * 1.2;
-
-                slider.scrollLeft = scrollLeft - walk;
-              }}
-              onTouchEnd={(e) => {
-                e.currentTarget.dataset.isDown = "false";
-                e.currentTarget.style.scrollBehavior = "smooth";
-              }}
-            >
-              {testimonials.map((t, index) => (
-                <article
-                  key={`${t.name}-${index}`}
+          <Carousel
+            header={
+              <>
+                <h2
                   style={{
-                    flex: "0 0 360px",
-
-                    backgroundColor: "#FFFFFF",
-
-                    borderRadius: 4,
-
-                    padding: "36px 32px",
-
-                    minHeight: 250,
-
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "space-between",
-
-                    boxSizing: "border-box",
-
-                    boxShadow: "0 12px 35px rgba(0,0,0,0.12)",
+                    color: "#FFFFFF",
+                    fontFamily: "Playfair Display, serif",
+                    fontSize: "clamp(32px, 4vw, 52px)",
+                    fontWeight: 500,
+                    lineHeight: 1.15,
+                    margin: "16px 0 0",
                   }}
                 >
-                  {/* ASPAS */}
-                  <div
-                    style={{
-                      color: "#C9974B",
-                      fontFamily: "Georgia, serif",
-                      fontSize: 48,
-                      lineHeight: 0.8,
-                      marginBottom: 18,
-                    }}
-                  >
-                    “
-                  </div>
-
-                  {/* TEXTO */}
-                  <p
-                    style={{
-                      margin: 0,
-
-                      color: "#26344D",
-
-                      fontFamily: "Inter, sans-serif",
-
-                      fontSize: 16,
-
-                      lineHeight: 1.7,
-                    }}
-                  >
-                    {t.text}
-                  </p>
-
-                  {/* CLIENTE */}
-                  <div
-                    style={{
-                      marginTop: 28,
-
-                      paddingTop: 20,
-
-                      borderTop: "1px solid #E7E2D8",
-                    }}
-                  >
-                    <strong
-                      style={{
-                        display: "block",
-
-                        color: "#0F1B33",
-
-                        fontFamily: "Inter, sans-serif",
-
-                        fontSize: 15,
-
-                        fontWeight: 700,
-                      }}
-                    >
-                      {t.name}
-                    </strong>
-
-                    <span
-                      style={{
-                        display: "block",
-
-                        marginTop: 5,
-
-                        color: "#7A8190",
-
-                        fontFamily: "Inter, sans-serif",
-
-                        fontSize: 13,
-                      }}
-                    >
-                      {t.city}
-                    </span>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            {/* SETA DIREITA */}
-            <button
-              type="button"
-              aria-label="Próximos depoimentos"
-              onClick={() => {
-                depoimentosRef.current?.scrollBy({
-                  left: 380,
-                  behavior: "smooth",
-                });
-              }}
-              style={{
-                position: "absolute",
-                right: -18,
-                top: "50%",
-                transform: "translateY(-50%)",
-                zIndex: 10,
-
-                width: 52,
-                height: 52,
-                borderRadius: "50%",
-
-                border: "1px solid rgba(201,151,75,0.7)",
-                backgroundColor: "#0F1B33",
-                color: "#C9974B",
-
-                fontSize: 30,
-                lineHeight: 1,
-
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-
-                cursor: "pointer",
-
-                transition: "all 0.25s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#C9974B";
-                e.currentTarget.style.color = "#0F1B33";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "#0F1B33";
-                e.currentTarget.style.color = "#C9974B";
-              }}
-            >
-              →
-            </button>
-          </div>
-
+                  O que dizem nossos clientes
+                </h2>
+              </>
+            }
+          />
           {/* INDICAÇÃO */}
           <div
             style={{
