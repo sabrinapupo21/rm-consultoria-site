@@ -106,15 +106,15 @@ export default function Consorcio() {
               </div>
             </div>
 
-            <div
+            {/* <div
               style={{
                 backgroundColor: "rgba(255,255,255,0.07)",
                 border: "1px solid rgba(255,255,255,0.12)",
                 borderRadius: 20,
                 padding: "36px 32px",
               }}
-            >
-              <div
+            > */}
+            {/* <div
                 style={{
                   fontFamily: "Inter, sans-serif",
                   fontWeight: 600,
@@ -159,8 +159,8 @@ export default function Consorcio() {
                     </span>
                   </div>
                 ))}
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
           </div>
         </div>
 
@@ -171,7 +171,211 @@ export default function Consorcio() {
           }
         `}</style>
       </section>
+      {/* ── CONSÓRCIO DESTAQUE ── */}
+      <section
+        style={{
+          backgroundColor: "#0F1B33",
+          padding: "96px 24px",
+          backgroundImage:
+            "radial-gradient(ellipse 70% 90% at 100% 50%, rgba(201,151,75,0.08) 0%, transparent 60%)",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: 1200,
+            margin: "0 auto",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "48px 80px",
+            alignItems: "center",
+          }}
+          className="split-grid"
+        >
+          <div>
+            <SectionLabel light>Solução em destaque</SectionLabel>
+            <h2
+              style={{
+                fontFamily: "Fraunces, serif",
+                fontWeight: 700,
+                fontSize: "clamp(28px, 4vw, 44px)",
+                color: "#ffffff",
+                lineHeight: 1.15,
+                letterSpacing: "-0.8px",
+                marginBottom: 20,
+              }}
+            >
+              Planeje seu próximo projeto
+            </h2>
+            <p
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontSize: 17,
+                color: "rgba(255,255,255,0.75)",
+                lineHeight: 1.7,
+                marginBottom: 32,
+              }}
+            >
+              Sem juros — só taxa de administração, diluída nas parcelas. Você
+              define o valor da carta, o prazo e a estratégia de contemplação,
+              com acompanhamento da RM em cada etapa.
+            </p>
 
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 14,
+                marginBottom: 40,
+              }}
+            >
+              {[
+                "Comprar imóvel novo ou usado",
+                "Comprar terreno e construir",
+                "Reformar ou ampliar",
+                "Planejar patrimônio com o tempo a seu favor",
+              ].map((item) => (
+                <div
+                  key={item}
+                  style={{ display: "flex", alignItems: "center", gap: 12 }}
+                >
+                  <span
+                    style={{
+                      width: 22,
+                      height: 22,
+                      borderRadius: "50%",
+                      backgroundColor: "#C9974B",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexShrink: 0,
+                    }}
+                  >
+                    <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                      <path
+                        d="M1 4L3.5 6.5L9 1"
+                        stroke="white"
+                        strokeWidth="1.8"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: "Inter, sans-serif",
+                      fontSize: 16,
+                      color: "rgba(255,255,255,0.85)",
+                    }}
+                  >
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Stats card */}
+          <div
+            style={{
+              backgroundColor: "rgba(255,255,255,0.07)",
+              border: "1px solid rgba(255,255,255,0.12)",
+              borderRadius: 20,
+              padding: 40,
+              backdropFilter: "blur(8px)",
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 600,
+                fontSize: 13,
+                color: "#C9974B",
+                letterSpacing: "1.2px",
+                textTransform: "uppercase",
+                marginBottom: 32,
+              }}
+            >
+              Por que consórcio?
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>
+              {[
+                {
+                  label: "Juros no consórcio",
+                  value: "Zero",
+                  sub: "Só taxa de administração",
+                },
+                {
+                  label: "Uso do FGTS",
+                  value: "Sim",
+                  sub: "Lance, amortização ou quitação",
+                },
+                {
+                  label: "Valor da carta",
+                  value: "Flexível",
+                  sub: "Você escolhe o quanto precisa",
+                },
+                {
+                  label: "Contemplação",
+                  value: "Por sorteio ou lance",
+                  sub: "Estratégia personalizada com a RM",
+                },
+              ].map((stat) => (
+                <div
+                  key={stat.label}
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "flex-start",
+                    borderBottom: "1px solid rgba(255,255,255,0.08)",
+                    paddingBottom: 20,
+                  }}
+                >
+                  <div>
+                    <div
+                      style={{
+                        fontFamily: "Inter, sans-serif",
+                        fontSize: 13,
+                        color: "rgba(255,255,255,0.7)",
+                        marginBottom: 4,
+                      }}
+                    >
+                      {stat.label}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "Inter, sans-serif",
+                        fontSize: 12,
+                        color: "rgba(255,255,255,0.6)",
+                      }}
+                    >
+                      {stat.sub}
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "Fraunces, serif",
+                      fontWeight: 700,
+                      fontSize: 18,
+                      color: "#C9974B",
+                      textAlign: "right",
+                      maxWidth: 140,
+                    }}
+                  >
+                    {stat.value}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <style>{`
+          .split-grid { grid-template-columns: 1fr 1fr !important; }
+          @media (max-width: 900px) {
+            .split-grid { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
+      </section>
       {/* ── COMO FUNCIONA ── */}
       <section style={{ backgroundColor: "#f8f7f4", padding: "96px 24px" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>

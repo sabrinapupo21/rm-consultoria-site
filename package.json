@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "deploy": "npm run build && scp -P 65002 -r dist/. u583239046@br-asc-web893.main-hosting.eu:domains/rmconsultoriaimobiliaria.com.br/public_html/ && ssh -p 65002 u583239046@br-asc-web893.main-hosting.eu \"cd ~/domains/rmconsultoriaimobiliaria.com.br/public_html && chmod -R 755 . && find . -type f -exec chmod 644 {} +\"",
     "lint": "eslint .",
     "preview": "vite preview"
   },
